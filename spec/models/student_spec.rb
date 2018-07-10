@@ -10,7 +10,7 @@ describe Student, type: :model do
         student_1 = Student.create(name: "Seth", age: 30)
         student_2 = Student.create(name: "Angela", age: 21)
 
-        visit students_path
+        visit '/students'
 
         expect(page).to have_content(student_1.name)
         expect(page).to have_content(student_1.age)
